@@ -41,3 +41,5 @@ printed result: ![printed result](img/result.jpg "Printed result")
 There are some alternative approaches in the OpenScad file using more of a type jack wrench approach, however, there was too little clearance between the rail and buildplate to make this work. Those are still in the code, but lack a bit of documentation.  The relevant code for the third and final iteration is at the bottom of the file. (look for "third and final iteration")
 
 To generate the threaded parts, I've made use of the excellent [threadlib](https://github.com/adrianschlatter/threadlib) library, put that in a "threadlib" folder in the source directory to build the project.
+
+This thing is also published on Thingiverse: https://www.thingiverse.com/thing:4935804
