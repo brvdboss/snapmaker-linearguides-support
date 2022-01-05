@@ -43,3 +43,5 @@ There are some alternative approaches in the OpenScad file using more of a type 
 To generate the threaded parts, I've made use of the excellent [threadlib](https://github.com/adrianschlatter/threadlib) library, put that in a "threadlib" folder in the source directory to build the project.
 
 This thing is also published on Thingiverse: https://www.thingiverse.com/thing:4935804
+
+The version for the new bed has not been tested. As it is 3mm thicker, it might not fit. I'm assuming it actually slides deeper into the bed, but this is to be confirmed by someone who actually has the new bed.
