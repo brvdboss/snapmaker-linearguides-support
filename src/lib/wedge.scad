@@ -368,17 +368,24 @@ module bottomfiller() {
 }
 
 
-module railtopwithhole() {
-    cuth=10.5;
+module railtopwithhole(version=3) {
+    cuth= version==3 ? 10.5 : version==4 ? 7.5 : 0;
     dia = 14;
     difference() {
-        rotate ([90,0,0])
-            import("Linear_Rail_Adapter_v3.stl");
-        translate([0,0,10.5]) mountholes();
-        cube([bottoms,bottoms,10.5]);
-        translate([bottoms/2,bottoms/2,10.5]) circlesupportcutout();
+        if (version==3) {
+            rotate ([90,0,0])
+                import("Linear_Rail_Adapter_v3.stl");
+        } else if (version==4) {
+            rotate ([90,0,0])
+                import("Linear_Rail_Adapter_v4.stl");
+        }
+        translate([0,0,cuth]) mountholes();
+        
+
+        cube([bottoms,bottoms,cuth]);
+        translate([bottoms/2,bottoms/2,cuth]) circlesupportcutout();
         //for debugging purposes
-        //translate([bottoms/2,bottoms/2,10]) cube([bottoms,bottoms,11]);
+        //translate([bottoms/2,bottoms/2,7]) cube([bottoms,bottoms,11]);
         hull() {
             translate([dia/2,dia/2+1,0]) cylinder(h=30,d=dia);
             translate([dia/2,0,0]) cylinder(h=30,d=dia);
