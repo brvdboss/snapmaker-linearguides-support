@@ -44,4 +44,20 @@ To generate the threaded parts, I've made use of the excellent [threadlib](https
 
 This thing is also published on Thingiverse: https://www.thingiverse.com/thing:4935804
 
-The version for the new bed has not been tested. As it is 3mm thicker, it might not fit. I'm assuming it actually slides deeper into the bed, but this is to be confirmed by someone who actually has the new bed.
+**Warning if you have the new bed**
+The version for the new bed does not provide enough clearance to install it.  A possible workaround is to insert spacers between the y-rail and bed.
+
+I've had a chance to get a better look at the new platform as someone has taken the time to model it which makes it a lot easier to inspect it without having it physically:
+https://cults3d.com/en/3d-model/tool/snapmaker-2-0-platform-3d-model-a250-a350-a350t
+
+If you look at the files for the new and old model, it becomes very clear that the new model is thicker/higher than the old one. (the pointy ends especially)
+
+And it is that 3mm that we're missing indeed.  If I make the top part thin enough, it falls apart as the different segments are no longer connected :(  So coming up with a solution will be more complex than just shaving off a part.
+Something that, in all honesty, I won't be doing just for fun as I have other projects lined up right now.  And not being able to test it myself makes that a pain.
+
+It should be doable however:
+* the bottom part could be reduced to just fill the recess skipping the holes to attach it. it will stay in place just because of the pressure and it is only there to provide some support. That will save 1mm.
+* the threaded part and screw could both lose 1mm as well. if needed. (perhaps remove the holes in the nut to make sure it stays strong enough).  with that I think it's also possible to shave up 1.5-2mm which should bring it in range of what's needed.
+
+If someone wants to make these necessary changes I'll be happy to explain the OpenScad code if needed to get you started.
+**End Warning**
